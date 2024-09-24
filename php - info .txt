@@ -1,0 +1,166 @@
+0. START
+
+- włącz apache i mysql
+
+- zrob plik.php w htdocs 
+
+- wpisz localhost/folder/plik ale zrob sobie nowy folder to bedzie ladniej (inaczej wczyta pierwszy utworzony)
+
+- NA KOŃCU SA ŚREDNIKIIIIIIIII
+
+- wszystko jest w kwadratowych []
+ 
+1. ZMIENNE
+
+- nie mozna zaczynac od liczb, nie moze byc kropek bo konkatenacja i - bo cos
+
+$liczba = 10;
+$cena = 19.99; (kropki zamiast przecinków)
+
+$imie = "Jan";
+$miasto = 'Warszawa';
+
+$aktywny = true;
+$zalogowany = false;
+
+2. TABLICE 
+
+- tworzenie 
+$owoce = array('jabłko', 'banan', 'śliwka');
+$liczby = array(1,2,3,4,5);
+
+- wywoływanie 
+$owoce[1]; (wyjdzie banan)
+
+3. TABLICE WIELOWYMIAROWE (główna tablica i podtablice)
+
+- są po przecinkach i po głównej jest średnik
+
+- tworzenie
+$liczby = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+];
+
+-wywoływanie
+$liczby[1][0]; (wyjdzie 4)
+
+4. TABLICE ASOCJACYJNE
+
+- klucze i ich wartości
+- zamaist = są => strzałki
+
+- tworzenie
+$dane = [
+    "imie" => "Karolinka",
+    "nazwisko" => "Hudyga"
+];
+
+- wywoływanie
+echo $dane["imie"]; (karolinka)
+
+5. TABLICE ASOCJACYJNE WIELOWYMIAROWE
+
+-takie 3d jak zwykłe, tylko że mają jeszcze klucze i wartości
+- nie mozna odwolywac sie do wartosci, tylko do kluczy
+- nie mozna w wywolywaniu korzystac z liczb - tylko z nazw itp
+
+$kotki = [
+    "kotek1" => [
+        "imie" => "łatka",
+        "kolor" => "biały"
+    ],
+
+    "kotek2" => [
+        "imie" => "edward",
+        "kolor" => "czarny"
+    ]
+];
+
+-wywoływanie
+echo $kotki["kotek1"]["imie"];
+
+6. FUNKCJE
+
+function nazwa()
+{
+    zawartość;
+}
+
+- wywoływanie
+nazwa(jakieś, wartości);
+
+- można je przypisać do funkcji np.
+
+function dodaj($a, $b)
+{
+    return $a + $b;
+}
+
+$wynik = dodaj(5,4);
+
+7. IF
+
+if (warunek) {
+    zawartość
+}
+
+8. IF ELSE
+
+if (warunek) {
+    zawartość
+} else {
+    zawartość
+}
+
+9. IF ELSEIF
+
+if (warunek) {
+    zawartość
+} elseif (warunek) {
+    zawartość
+} else {
+    zawartość
+}
+
+10. SWITCH
+
+switch($opcja) {
+    case 'cos':
+        zawartość
+        break;
+    case 'cos2':
+        zawartość
+        continue;
+    default:
+        zawartość
+}
+
+11. MATCH
+
+- zwraca bezpośrednio wynik więc można go dać do zmiennej
+
+$wynik = match(opcja) {
+    '1' => zawartość,
+    '2' => zawartość,
+    '3','4' => zawartość,
+    'default' => zawartość,
+};
+
+12. OPERATORY TRÓJARGUMENTOWE
+
+- skrócona forma instrukcji if else
+- wyniki tylko true i false
+
+if ($wiek < 16) {
+    $dziecko = true; 
+} else {
+    $dziecko = false;
+}
+
+$dziecko = $wiek < 16 ? true : false;
+
+$zmienna = warunek ? zawartość : else;
+
+$dziecko = $wiek < 16 ? $rabat=10 : $rabat=20;
